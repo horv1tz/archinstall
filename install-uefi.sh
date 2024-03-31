@@ -33,6 +33,10 @@ echo -e "\e[32mНастройка часового пояса\e[0m"
 ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 hwclock --systohc
 
+echo -e "\e[32mНастройка vconsole\e[0m"
+echo "KEYMAP=ru" > /etc/vconsole.conf
+echo "FONT=cyr-sun16" >> /etc/vconsole.conf
+
 echo -e "\e[32mЛокализация\e[0m"
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 echo "ru_RU.UTF-8 UTF-8" >> /etc/locale.gen
